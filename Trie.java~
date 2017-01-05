@@ -4,8 +4,6 @@
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
-import java.io.FileReader;
-import java.io.BufferedReader;
 
 public class Trie {
   public static class TrieNode{
@@ -39,11 +37,10 @@ public class Trie {
   public ArrayList<String> autoComplete(String word){
     ArrayList<String> wordList = new ArrayList<>();
     TrieNode currentNode = root;
-    for(char character : word.toCharArray()){
+    for(char character : word.toCharArray())
       currentNode = currentNode.children.get(new Character(character));
-      if(currentNode == null)
-        return wordList;
-    }
+    if(currentNode == null)
+      return wordList;
     traverseNodes(currentNode, wordList);
     return wordList;
   }
@@ -55,22 +52,5 @@ public class Trie {
       traverseNodes(entry.getValue(), words);      
     }
   }  
-  
-  public void loadDictionary(){
-    FileReader fileReader = null;
-    BufferedReader bufferedReader = null;
-    try{
-      fileReader = new FileReader("dictionary.txt");
-      bufferedReader = new BufferedReader(fileReader);
-      String word;
-      while((word = bufferedReader.readLine()) != null){
-        insert(word);
-      }
-      bufferedReader.close();
-    }
-    catch(Exception ex){
-      ex.printStackTrace();
-    }
-  }
   
 }

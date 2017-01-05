@@ -13,7 +13,6 @@ public class TrieTest{
     trie.insert("black");
     trie.insert("blonde");
     trie.insert("red");
-    trie.insert("brown");
     
     // Testing search() function
     testMethod(trie.search("purple"),  true);
@@ -22,10 +21,7 @@ public class TrieTest{
     
     // Testing autoComplete() function
     System.out.println(" Suggested list: " + trie.autoComplete("bl"));
-    System.out.println(" Suggested list: " + trie.autoComplete("r"));
-    System.out.println(" Suggested list: " + trie.autoComplete("b"));
-    System.out.println(" Suggested list: " + trie.autoComplete(""));
-    System.out.println(" Suggested list: " + trie.autoComplete("q"));
+    System.out.println(" Suggested list: " + trie.autoComplete("qx"));
   }
  
   /* 
