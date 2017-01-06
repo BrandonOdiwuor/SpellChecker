@@ -28,6 +28,7 @@ public class TrieTest{
     
     // Testing suggestWords()
     System.out.println(" Suggested list: " + trie.suggestWords("bluq"));
+     System.out.println(" Suggested list: " + trie.suggestWords("aluq")); 
   }
  
   /* 

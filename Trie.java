@@ -81,6 +81,8 @@ public class Trie {
     ArrayList<String> wordList = new ArrayList<>();
     TrieNode currentNode = root;
     for(char character : word.toCharArray()){
+      if(currentNode == root && !currentNode.children.containsKey(new Character(character)))
+        return wordList;
       if(currentNode.children.get(new Character(character)) == null){
         traverseNodes(currentNode, wordList);
         break;
