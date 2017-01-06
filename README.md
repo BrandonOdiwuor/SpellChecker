@@ -1,2 +1,6 @@
 # SpellChecker
-Spell Checker
+# Included files
+*Trie.java
+*TrieTest.java
+*SpellChecker.java
+*MainProgram.java
