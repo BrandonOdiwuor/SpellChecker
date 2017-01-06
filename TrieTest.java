@@ -26,6 +26,9 @@ public class TrieTest{
     System.out.println(" Suggested list: " + trie.autoComplete("b"));
     System.out.println(" Suggested list: " + trie.autoComplete(""));
     System.out.println(" Suggested list: " + trie.autoComplete("q"));
+    
+    // Testing suggestWords()
+    System.out.println(" Suggested list: " + trie.suggestWords("bluq"));
   }
  
   /* 
